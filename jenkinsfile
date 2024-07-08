@@ -1,21 +1,27 @@
 pipeline {
-    agent any
-    stages {
-        stage('BUILD') {
+	agent any {
+	 stages{
+		stage('BUILD') {
+			steps {
+				sh '''
+					pwd
+					sleep 5
+					echo This is the fist stage: BUILD
+				'''
+			}	
+		
+		}
+		
+		stage('DEPLOY') {
+			steps {
+				sh '''
+					pwd
+					sleep 5
+					echo This is the fist stage: DEPLOY
+				'''
+			}	
+		}
+	}
 
-            steps {
-                sh '''
-                'sleep 5'
-                echo "this is first build"
-                 '''
-            }
-            stage('DEPLOY') {
-                steps {
-                    
-
-                }
-            }
-
-        }
-    }
+}
 }

@@ -1,16 +1,23 @@
-pipeline{
-        agent any 
-stages {
-    stage ('build'){
-    steps{
+pipeline {
+    agent any 
+            environment {
+            STAGE_TETS = 'test env'
+        }
 
-    }
-    }
-    
-    stage ('deploy'){
-        steps{
-            
+        stages {
+            stage ('BUILD') {
+            steps {
+                sh 'sleep 5'
+            }
+            stage ('DEPLOY') {
+            steps {
+                sh '''
+                   #!/bin/bash
+                   ls -lrt
+                   'sleep 5'
+                   '''
+            }
+            }
         }
     }
-}
 }

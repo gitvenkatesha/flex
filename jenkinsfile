@@ -1,13 +1,12 @@
 pipe line {
     agent any
     stages {
-        stage(BUILD) {
+        stage (BUILD) {
             steps {
                 sh '''
                 'sleep 5'
                 echo "this is first build"
-
-                '''
+                 '''
             }
 
         }

@@ -1,27 +1,25 @@
 pipeline {
-	agent any {
-	 stages{
-		stage('BUILD') {
-			steps {
-				sh '''
-					pwd
-					sleep 5
-					echo This is the fist stage: BUILD
-				'''
-			}	
-		
-		}
-		
-		stage('DEPLOY') {
-			steps {
-				sh '''
-					pwd
-					sleep 5
-					echo This is the fist stage: DEPLOY
-				'''
-			}	
-		}
-	}
+    agent any
 
-}
+    stages {
+        stage('Build') {
+            steps {
+                '''
+				touch ven
+						'sleep 5'
+                 '''                
+			}
+			
+        }
+        stage('Test') {
+            steps {
+                
+            }
+        }
+        stage('Deploy') {
+            steps {
+                
+            }
+        }
+    }
 }

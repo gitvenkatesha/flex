@@ -3,11 +3,11 @@ pipeline {
 
     stages {
         stage('Build') {
-            steps {
-                '''
-				touch ven
-						'sleep 5'
-                 '''                
+            
+			steps {
+                     
+			        	
+                            
 			}
 			
         }
@@ -16,10 +16,6 @@ pipeline {
                 
             }
         }
-        stage('Deploy') {
-            steps {
-                
-            }
-        }
-    }
+	}
 }
+	        

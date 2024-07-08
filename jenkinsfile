@@ -8,6 +8,12 @@ pipe line {
                 echo "this is first build"
                  '''
             }
+            stage('DEPLOY') {
+                steps {
+                    sh '''
+                    
+                }
+            }
 
         }
     }
